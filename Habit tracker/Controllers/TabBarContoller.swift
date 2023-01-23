@@ -13,6 +13,7 @@ final class TabBarContoller: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         delegate = self
         tabBar.backgroundColor = .white
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
 
     override func viewWillAppear(_ animated: Bool) {
