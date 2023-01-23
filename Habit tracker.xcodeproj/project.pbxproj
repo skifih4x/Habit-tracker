@@ -15,6 +15,14 @@
 		00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD5297ED557006797F5 /* MainViewController.swift */; };
 		00FD1DDB297ED558006797F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FD1DDA297ED558006797F5 /* Assets.xcassets */; };
 		00FD1DDE297ED558006797F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FD1DDC297ED558006797F5 /* LaunchScreen.storyboard */; };
+		37CAB018297F4ACC00A665E5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB017297F4ACC00A665E5 /* Theme.swift */; };
+		37CAB020297F50D600A665E5 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB019297F50D500A665E5 /* Manrope-Regular.ttf */; };
+		37CAB021297F50D600A665E5 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01A297F50D500A665E5 /* Manrope-Medium.ttf */; };
+		37CAB022297F50D600A665E5 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01B297F50D500A665E5 /* Manrope-SemiBold.ttf */; };
+		37CAB023297F50D600A665E5 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01C297F50D500A665E5 /* Manrope-Light.ttf */; };
+		37CAB024297F50D600A665E5 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01D297F50D500A665E5 /* Manrope-ExtraBold.ttf */; };
+		37CAB025297F50D600A665E5 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01E297F50D500A665E5 /* Manrope-Bold.ttf */; };
+		37CAB026297F50D600A665E5 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01F297F50D500A665E5 /* Manrope-ExtraLight.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		00FD1DDA297ED558006797F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00FD1DDD297ED558006797F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FD1DDF297ED558006797F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37CAB017297F4ACC00A665E5 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		37CAB019297F50D500A665E5 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		37CAB01A297F50D500A665E5 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		37CAB01B297F50D500A665E5 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		37CAB01C297F50D500A665E5 /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
+		37CAB01D297F50D500A665E5 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
+		37CAB01E297F50D500A665E5 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		37CAB01F297F50D500A665E5 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +87,7 @@
 			children = (
 				00FD1DD1297ED557006797F5 /* AppDelegate.swift */,
 				00FD1DD3297ED557006797F5 /* SceneDelegate.swift */,
+				37CAB017297F4ACC00A665E5 /* Theme.swift */,
 				00FD1DDF297ED558006797F5 /* Info.plist */,
 			);
 			path = App;
@@ -81,6 +98,7 @@
 			children = (
 				00FD1DDA297ED558006797F5 /* Assets.xcassets */,
 				00FD1DDC297ED558006797F5 /* LaunchScreen.storyboard */,
+				37CAB027297F50DE00A665E5 /* Fonts */,
 			);
 			path = Resurces;
 			sourceTree = "<group>";
@@ -135,6 +153,20 @@
 				00CC7EF2297EF6F4004B0DC2 /* Resurces */,
 			);
 			path = "Habit tracker";
+			sourceTree = "<group>";
+		};
+		37CAB027297F50DE00A665E5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				37CAB01E297F50D500A665E5 /* Manrope-Bold.ttf */,
+				37CAB01D297F50D500A665E5 /* Manrope-ExtraBold.ttf */,
+				37CAB01F297F50D500A665E5 /* Manrope-ExtraLight.ttf */,
+				37CAB01C297F50D500A665E5 /* Manrope-Light.ttf */,
+				37CAB01A297F50D500A665E5 /* Manrope-Medium.ttf */,
+				37CAB019297F50D500A665E5 /* Manrope-Regular.ttf */,
+				37CAB01B297F50D500A665E5 /* Manrope-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +227,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CAB022297F50D600A665E5 /* Manrope-SemiBold.ttf in Resources */,
 				00FD1DDE297ED558006797F5 /* LaunchScreen.storyboard in Resources */,
 				00FD1DDB297ED558006797F5 /* Assets.xcassets in Resources */,
+				37CAB021297F50D600A665E5 /* Manrope-Medium.ttf in Resources */,
+				37CAB025297F50D600A665E5 /* Manrope-Bold.ttf in Resources */,
+				37CAB023297F50D600A665E5 /* Manrope-Light.ttf in Resources */,
+				37CAB020297F50D600A665E5 /* Manrope-Regular.ttf in Resources */,
+				37CAB026297F50D600A665E5 /* Manrope-ExtraLight.ttf in Resources */,
+				37CAB024297F50D600A665E5 /* Manrope-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +252,7 @@
 				0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */,
 				00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */,
 				0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */,
+				37CAB018297F4ACC00A665E5 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +393,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W9FSXFWG34;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Habit tracker/Info.plist";
+				INFOPLIST_FILE = "Habit tracker/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -380,7 +420,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W9FSXFWG34;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Habit tracker/Info.plist";
+				INFOPLIST_FILE = "Habit tracker/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
