@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingViewController: UIViewController {
 
-    lazy var mainImage: UIImageView = {
+    private lazy var mainImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "startImage")
         image.contentMode = .scaleAspectFit
@@ -17,7 +17,7 @@ final class OnboardingViewController: UIViewController {
         return image
     }()
 
-    lazy var firstLabel: UILabel = {
+    private lazy var firstLabel: UILabel = {
         let label = UILabel()
         label.text = "Будь творцом своей жизни!"
         label.font = UIFont(name: "Manrope-SemiBold", size: 20)
@@ -26,7 +26,7 @@ final class OnboardingViewController: UIViewController {
         return label
     }()
 
-    lazy var subLabel: UILabel = {
+    private lazy var subLabel: UILabel = {
         let label = UILabel()
         label.text =
                 """
@@ -80,7 +80,7 @@ final class OnboardingViewController: UIViewController {
         ])
     }
 
-    @objc func getStart() {
+    @objc private func getStart() {
         navigationController?.pushViewController(TabBarContoller(), animated: true)
     }
 }
