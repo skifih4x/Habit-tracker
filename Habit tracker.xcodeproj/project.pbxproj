@@ -10,13 +10,6 @@
 		0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E2297EE62D00353EF1 /* OnboardingViewController.swift */; };
 		0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E4297EE67700353EF1 /* TabBarContoller.swift */; };
 		0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E6297EF2F700353EF1 /* CalendarViewController.swift */; };
-		00CF56ED297F4CA700DBE062 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CF56EB297F4AD200DBE062 /* Manrope-Bold.ttf */; };
-		00CF56EE297F4CA900DBE062 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CF56EA297F4AD200DBE062 /* Manrope-ExtraBold.ttf */; };
-		00CF56EF297F4CAC00DBE062 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CF56E9297F4AD200DBE062 /* Manrope-Light.ttf */; };
-		00CF56F0297F4CAF00DBE062 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CF56E7297F4AD200DBE062 /* Manrope-ExtraLight.ttf */; };
-		00CF56F2297F4CB200DBE062 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CF56E8297F4AD200DBE062 /* Manrope-Medium.ttf */; };
-		00CF56F3297F4CB400DBE062 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CF56E6297F4AD200DBE062 /* Manrope-Regular.ttf */; };
-		00CF56F4297F4CB600DBE062 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CF56EC297F4AD200DBE062 /* Manrope-SemiBold.ttf */; };
 		00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD1297ED557006797F5 /* AppDelegate.swift */; };
 		00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD3297ED557006797F5 /* SceneDelegate.swift */; };
 		00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD5297ED557006797F5 /* MainViewController.swift */; };
@@ -25,7 +18,6 @@
 		37CAB018297F4ACC00A665E5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB017297F4ACC00A665E5 /* Theme.swift */; };
 		37CAB020297F50D600A665E5 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB019297F50D500A665E5 /* Manrope-Regular.ttf */; };
 		37CAB021297F50D600A665E5 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01A297F50D500A665E5 /* Manrope-Medium.ttf */; };
-		37CAB022297F50D600A665E5 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01B297F50D500A665E5 /* Manrope-SemiBold.ttf */; };
 		37CAB023297F50D600A665E5 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01C297F50D500A665E5 /* Manrope-Light.ttf */; };
 		37CAB024297F50D600A665E5 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01D297F50D500A665E5 /* Manrope-ExtraBold.ttf */; };
 		37CAB025297F50D600A665E5 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01E297F50D500A665E5 /* Manrope-Bold.ttf */; };
@@ -256,13 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37CAB022297F50D600A665E5 /* Manrope-SemiBold.ttf in Resources */,
 				00FD1DDE297ED558006797F5 /* LaunchScreen.storyboard in Resources */,
-				00CF56F0297F4CAF00DBE062 /* Manrope-ExtraLight.ttf in Resources */,
-				00CF56EE297F4CA900DBE062 /* Manrope-ExtraBold.ttf in Resources */,
-				00CF56F4297F4CB600DBE062 /* Manrope-SemiBold.ttf in Resources */,
-				00CF56F2297F4CB200DBE062 /* Manrope-Medium.ttf in Resources */,
-				00CF56ED297F4CA700DBE062 /* Manrope-Bold.ttf in Resources */,
 				00FD1DDB297ED558006797F5 /* Assets.xcassets in Resources */,
 				37CAB021297F50D600A665E5 /* Manrope-Medium.ttf in Resources */,
 				37CAB025297F50D600A665E5 /* Manrope-Bold.ttf in Resources */,

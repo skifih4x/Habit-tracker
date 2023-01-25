@@ -41,17 +41,6 @@ final class OnboardingViewController: UIViewController {
         return label
     }()
 
-    lazy var startButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Давай", for: .normal)
-        button.backgroundColor = UIColor(named: "buttonColor")
-        button.layer.cornerRadius = 10
-        button.titleLabel?.font = UIFont(name: "Manrope-SemiBold", size: 16)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(getStart), for: .touchUpInside)
-        return button
-    }()
-    
     private let onboardingImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "OnboardingImage")
@@ -109,13 +98,12 @@ final class OnboardingViewController: UIViewController {
         return button
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyle()
         setupLayout()
         setConstraints()
+        buttonTapped()
     }
     
     private func setupStyle() {
@@ -130,7 +118,7 @@ final class OnboardingViewController: UIViewController {
         view.addSubview(startButton)
     }
     
-    func ButtonTapped() {
+    func buttonTapped() {
         startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
     }
     
