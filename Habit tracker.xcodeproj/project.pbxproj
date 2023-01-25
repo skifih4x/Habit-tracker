@@ -23,6 +23,7 @@
 		37CAB024297F50D600A665E5 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01D297F50D500A665E5 /* Manrope-ExtraBold.ttf */; };
 		37CAB025297F50D600A665E5 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01E297F50D500A665E5 /* Manrope-Bold.ttf */; };
 		37CAB026297F50D600A665E5 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01F297F50D500A665E5 /* Manrope-ExtraLight.ttf */; };
+		37CAB0292981C7D100A665E5 /* AddHabitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB0282981C7D100A665E5 /* AddHabitScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		37CAB01D297F50D500A665E5 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
 		37CAB01E297F50D500A665E5 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		37CAB01F297F50D500A665E5 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
+		37CAB0282981C7D100A665E5 /* AddHabitScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				00FD1DD5297ED557006797F5 /* MainViewController.swift */,
+				37CAB0282981C7D100A665E5 /* AddHabitScreen.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CAB0292981C7D100A665E5 /* AddHabitScreen.swift in Sources */,
 				0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */,
 				00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */,
 				00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */,
