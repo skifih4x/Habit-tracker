@@ -8,6 +8,49 @@
 import UIKit
 
 final class OnboardingViewController: UIViewController {
+
+    lazy var mainImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "startImage")
+        image.contentMode = .scaleAspectFit
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
+
+    lazy var firstLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Будь творцом своей жизни!"
+        label.font = UIFont(name: "Manrope-SemiBold", size: 20)
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    lazy var subLabel: UILabel = {
+        let label = UILabel()
+        label.text =
+                """
+                Добро пожаловать.
+                Давай начнем планировать
+                твой день!
+                """
+        label.font = UIFont(name: "Manrope-Regular", size: 14)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    lazy var startButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Давай", for: .normal)
+        button.backgroundColor = UIColor(named: "buttonColor")
+        button.layer.cornerRadius = 10
+        button.titleLabel?.font = UIFont(name: "Manrope-SemiBold", size: 16)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(getStart), for: .touchUpInside)
+        return button
+    }()
     
     private let onboardingImageView: UIImageView = {
         let imageView = UIImageView()

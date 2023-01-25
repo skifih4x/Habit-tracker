@@ -18,6 +18,7 @@ final class TabBarContoller: UITabBarController, UITabBarControllerDelegate {
             let names = UIFont.fontNames(forFamilyName: family)
             print("Family: \(family) Font names: \(names)")
         }
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
 
     override func viewWillAppear(_ animated: Bool) {
