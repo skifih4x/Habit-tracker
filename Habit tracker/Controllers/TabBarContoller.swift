@@ -29,6 +29,12 @@ final class TabBarContoller: UITabBarController, UITabBarControllerDelegate {
 
     func routeToCreateNewAd() {
         navigationController?.pushViewController(OnboardingViewController(), animated: true)
+        
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
 
     override func viewWillAppear(_ animated: Bool) {
