@@ -10,6 +10,7 @@
 		0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E2297EE62D00353EF1 /* OnboardingViewController.swift */; };
 		0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E4297EE67700353EF1 /* TabBarContoller.swift */; };
 		0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E6297EF2F700353EF1 /* CalendarViewController.swift */; };
+		0079C04429816BBB00073F3B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2951329807EBD00C486BE /* CustomTabBar.swift */; };
 		00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD1297ED557006797F5 /* AppDelegate.swift */; };
 		00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD3297ED557006797F5 /* SceneDelegate.swift */; };
 		00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD5297ED557006797F5 /* MainViewController.swift */; };
@@ -270,9 +271,9 @@
 			files = (
 				0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */,
 				00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */,
-				00D2951429807EBD00C486BE /* CustomTabBar.swift in Sources */,
 				00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */,
 				0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */,
+				0079C04429816BBB00073F3B /* CustomTabBar.swift in Sources */,
 				00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */,
 				0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */,
 				37CAB018297F4ACC00A665E5 /* Theme.swift in Sources */,
