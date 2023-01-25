@@ -35,6 +35,7 @@
 		00CF56EA297F4AD200DBE062 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
 		00CF56EB297F4AD200DBE062 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		00CF56EC297F4AD200DBE062 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		00D2951329807EBD00C486BE /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		00FD1DCE297ED557006797F5 /* Habit tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FD1DD1297ED557006797F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00FD1DD3297ED557006797F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				0053E8E4297EE67700353EF1 /* TabBarContoller.swift */,
+				00D2951329807EBD00C486BE /* CustomTabBar.swift */,
 				00CC7EF4297EF78D004B0DC2 /* Onboarding */,
 				00CC7EF3297EF782004B0DC2 /* Main */,
 				00CC7EF5297EF796004B0DC2 /* Calendar */,
@@ -268,6 +270,7 @@
 			files = (
 				0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */,
 				00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */,
+				00D2951429807EBD00C486BE /* CustomTabBar.swift in Sources */,
 				00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */,
 				0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */,
 				00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */,

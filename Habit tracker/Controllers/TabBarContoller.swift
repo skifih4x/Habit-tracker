@@ -11,8 +11,24 @@ final class TabBarContoller: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
+
+        setValue(CustomTabBar(frame: tabBar.frame), forKey: "tabBar")
         tabBar.backgroundColor = .white
+
+        navigationItem.setHidesBackButton(true, animated: false)
+
+        tabBar.isTranslucent = false
+
+        guard let tabBar = self.tabBar as? CustomTabBar else { return }
+
+        tabBar.didTapButton = { [unowned self] in
+            self.routeToCreateNewAd()
+        }
+        delegate = self
+    }
+
+    func routeToCreateNewAd() {
+        navigationController?.pushViewController(OnboardingViewController(), animated: true)
         
         for family in UIFont.familyNames.sorted() {
             let names = UIFont.fontNames(forFamilyName: family)
