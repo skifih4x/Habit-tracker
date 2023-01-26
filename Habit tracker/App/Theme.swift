@@ -11,15 +11,17 @@ enum Theme {
     static let fontName: String = "Manrope-Regular"
     static let fontBoldName: String = "Manrope-Bold"
     
-    
+//    button.backgroundColor = Theme.buttonAccentLight
     // MARK: - Colors
-    static let appColor: UIColor = UIColor(named: "AccentColor")!
-    static let backgroundLight: UIColor = UIColor(named: "BackgroundColor")!
-    static let backgroundWhite: UIColor = UIColor(named: "BackgroundColor2")!
-    static let buttonAccentDark: UIColor = UIColor(named: "ButtonAccentDark")!
-    static let buttonAccentLight: UIColor = UIColor(named: "ButtonAccentLight")!
-    static let textDark: UIColor = UIColor(named: "TextColorDark")!
-    static let textLight: UIColor = UIColor(named: "TextColorLight")!
+    static let appColor: UIColor = UIColor(named: "AccentColor") ?? .white
+    static let backgroundLight: UIColor = UIColor(named: "BackgroundColor") ?? .white
+    static let backgroundWhite: UIColor = UIColor(named: "BackgroundColor2") ?? .white
+    static let buttonAccentDark: UIColor = UIColor(named: "ButtonAccentDark") ?? .white
+    static let buttonAccentLight: UIColor = UIColor(named: "ButtonAccentLight") ?? .white
+    static let buttonBorder: UIColor = UIColor(named: "ButtonBorder") ?? .white
+
+    static let textDark: UIColor = UIColor(named: "TextColorDark") ?? .white
+    static let textLight: UIColor = UIColor(named: "TextColorLight") ?? .white
     
     // MARK: - Style
     static let buttonCornerRadius: CGFloat = 15
