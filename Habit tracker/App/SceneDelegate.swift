@@ -14,9 +14,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
+#warning ("Revert back")
         let window = UIWindow(windowScene: windowScene)
-        let tabBar = OnboardingViewController()
+//        let tabBar = OnboardingViewController()
+        let tabBar = AddHabitScreen()
         let navigationController = UINavigationController(rootViewController: tabBar)
         window.rootViewController = navigationController
         self.window = window

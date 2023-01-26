@@ -18,6 +18,9 @@ final class TabBarContoller: UITabBarController, UITabBarControllerDelegate {
         navigationItem.setHidesBackButton(true, animated: false)
 
         tabBar.isTranslucent = false
+        
+        tabBar.tintColor = Theme.buttonAccentDark
+        tabBar.unselectedItemTintColor = Theme.buttonAccentLight
 
         guard let tabBar = self.tabBar as? CustomTabBar else { return }
 
@@ -28,13 +31,10 @@ final class TabBarContoller: UITabBarController, UITabBarControllerDelegate {
     }
 
     func routeToCreateNewAd() {
-        navigationController?.pushViewController(OnboardingViewController(), animated: true)
-        
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
-        }
-        self.navigationItem.setHidesBackButton(true, animated: false)
+        navigationController?.pushViewController(AddHabitScreen(), animated: true)
+        self.navigationItem.setHidesBackButton(false, animated: false)
+        self.navigationItem.backButtonTitle = "Назад"
+        navigationController?.navigationBar.tintColor = Theme.buttonAccentDark
     }
 
     override func viewWillAppear(_ animated: Bool) {
