@@ -118,6 +118,8 @@ final class AddHabitScreen: UIViewController {
         setupLayout()
         setConstraints()
         buttonTapped()
+        setDelegates()
+        
         
     }
     
@@ -136,12 +138,19 @@ final class AddHabitScreen: UIViewController {
         view.addSubview(textInputField)
         view.addSubview(collectionView)
         view.addSubview(addButton)
+        collectionView.register(FirstSectionCell.self, forCellWithReuseIdentifier: "FirstSectionCell")
+        collectionView.register(SecondSectionCell.self, forCellWithReuseIdentifier: "SecondSectionCell")
+        collectionView.collectionViewLayout = createLayout()
 //        view.addSubview(habitImageLabel)
 //        view.addSubview(stackHView)
 //
 //        arrangeHStack()
     }
     
+    private func setDelegates() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
     
     
 //    private var stackImages: [UIImageView] = []
