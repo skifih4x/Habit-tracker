@@ -44,6 +44,7 @@ final class MainViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
         table.register(CellHabit.self, forCellReuseIdentifier: CellHabit.indetifer)
+        table.register(DoneHabitCell.self, forCellReuseIdentifier: DoneHabitCell.indetifier)
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
@@ -140,8 +141,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellHabit.indetifer, for: indexPath) as? CellHabit else { return UITableViewCell() }
-        return cell
+
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellHabit.indetifer, for: indexPath) as? CellHabit else { return UITableViewCell() }
+            return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DoneHabitCell.indetifier, for: indexPath) as? DoneHabitCell else { return UITableViewCell()}
+            return cell
+        }
+        return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
