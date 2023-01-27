@@ -88,6 +88,7 @@ final class MainViewController: UIViewController {
             habitTableView.backgroundColor = Theme.backgroundLight
         }
         layout()
+
     }
 
     private func layout() {
@@ -152,6 +153,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
         cell.layer.mask = maskLayer
     }
+
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title: "") {  _, view, complete in
+
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            complete(true)
+        }
+        deleteAction.image = UIImage(systemName: "trash")
+        deleteAction.backgroundColor = Theme.deleteBackground
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+
 }
 
 import SwiftUI

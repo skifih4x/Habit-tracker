@@ -11,7 +11,6 @@ enum Theme {
     static let fontName: String = "Manrope-Regular"
     static let fontBoldName: String = "Manrope-Bold"
     
-//    button.backgroundColor = Theme.buttonAccentLight
     // MARK: - Colors
     static let appColor: UIColor = UIColor(named: "AccentColor") ?? .white
     static let backgroundLight: UIColor = UIColor(named: "BackgroundColor") ?? .white
@@ -19,6 +18,8 @@ enum Theme {
     static let buttonAccentDark: UIColor = UIColor(named: "ButtonAccentDark") ?? .white
     static let buttonAccentLight: UIColor = UIColor(named: "ButtonAccentLight") ?? .white
     static let buttonBorder: UIColor = UIColor(named: "ButtonBorder") ?? .white
+    static let deleteBackground: UIColor = UIColor(named: "DeleteBackground") ?? .white
+    static let cellDoneBackground: UIColor = UIColor(named: "CellDoneBackground") ?? .white
 
     static let textDark: UIColor = UIColor(named: "TextColorDark") ?? .white
     static let textLight: UIColor = UIColor(named: "TextColorLight") ?? .white
