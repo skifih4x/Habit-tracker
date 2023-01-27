@@ -195,7 +195,7 @@ final class AddHabitScreen: UIViewController {
             addButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
             addButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             addButton.heightAnchor.constraint(equalToConstant: 48),
-            addButton.widthAnchor.constraint(equalToConstant: 320)
+//            addButton.widthAnchor.constraint(equalToConstant: 320)
             
         ])
         
