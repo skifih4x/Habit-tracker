@@ -10,6 +10,7 @@
 		0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E2297EE62D00353EF1 /* OnboardingViewController.swift */; };
 		0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E4297EE67700353EF1 /* TabBarContoller.swift */; };
 		0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E6297EF2F700353EF1 /* CalendarViewController.swift */; };
+		0065AA6B2984566D00E201BA /* DoneHabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065AA6A2984566D00E201BA /* DoneHabitCell.swift */; };
 		0079C04429816BBB00073F3B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2951329807EBD00C486BE /* CustomTabBar.swift */; };
 		007CCB292982AD9D00DBDDF4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 007CCB282982AD9D00DBDDF4 /* Realm */; };
 		007CCB2B2982AD9D00DBDDF4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 007CCB2A2982AD9D00DBDDF4 /* RealmSwift */; };
@@ -33,6 +34,7 @@
 		0053E8E2297EE62D00353EF1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		0053E8E4297EE67700353EF1 /* TabBarContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContoller.swift; sourceTree = "<group>"; };
 		0053E8E6297EF2F700353EF1 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0065AA6A2984566D00E201BA /* DoneHabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneHabitCell.swift; sourceTree = "<group>"; };
 		007CCB2D2982B4FF00DBDDF4 /* CellHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHabit.swift; sourceTree = "<group>"; };
 		00D2951329807EBD00C486BE /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		00FD1DCE297ED557006797F5 /* Habit tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				007CCB2D2982B4FF00DBDDF4 /* CellHabit.swift */,
+				0065AA6A2984566D00E201BA /* DoneHabitCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -133,11 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				00FD1DD5297ED557006797F5 /* MainViewController.swift */,
-
 				37CAB0282981C7D100A665E5 /* AddHabitScreen.swift */,
-
 				007CCB2C2982B4D100DBDDF4 /* Cell */,
-
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -293,6 +293,7 @@
 				00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */,
 				0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */,
 				37CAB018297F4ACC00A665E5 /* Theme.swift in Sources */,
+				0065AA6B2984566D00E201BA /* DoneHabitCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
