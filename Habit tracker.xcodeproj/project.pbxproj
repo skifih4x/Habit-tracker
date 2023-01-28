@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002CABC629848A4500BB27B7 /* MissedHobitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002CABC529848A4500BB27B7 /* MissedHobitCell.swift */; };
 		0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E2297EE62D00353EF1 /* OnboardingViewController.swift */; };
 		0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E4297EE67700353EF1 /* TabBarContoller.swift */; };
 		0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E6297EF2F700353EF1 /* CalendarViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		002CABC529848A4500BB27B7 /* MissedHobitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissedHobitCell.swift; sourceTree = "<group>"; };
 		0053E8E2297EE62D00353EF1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		0053E8E4297EE67700353EF1 /* TabBarContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContoller.swift; sourceTree = "<group>"; };
 		0053E8E6297EF2F700353EF1 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				007CCB2D2982B4FF00DBDDF4 /* CellHabit.swift */,
 				0065AA6A2984566D00E201BA /* DoneHabitCell.swift */,
+				002CABC529848A4500BB27B7 /* MissedHobitCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */,
 				0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */,
 				0079C04429816BBB00073F3B /* CustomTabBar.swift in Sources */,
+				002CABC629848A4500BB27B7 /* MissedHobitCell.swift in Sources */,
 				00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */,
 				0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */,
 				37CAB018297F4ACC00A665E5 /* Theme.swift in Sources */,

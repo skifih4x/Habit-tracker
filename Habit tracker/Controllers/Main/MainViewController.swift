@@ -45,6 +45,7 @@ final class MainViewController: UIViewController {
         table.dataSource = self
         table.register(CellHabit.self, forCellReuseIdentifier: CellHabit.indetifer)
         table.register(DoneHabitCell.self, forCellReuseIdentifier: DoneHabitCell.indetifier)
+        table.register(MissedHobitCell.self, forCellReuseIdentifier: MissedHobitCell.indetifier)
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
@@ -67,7 +68,7 @@ final class MainViewController: UIViewController {
                 """
         label.font = UIFont(name: "Manrope-Regular", size: 14)
         label.numberOfLines = 0
-        label.textAlignment = .center
+        label.textAlignment  = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -135,9 +136,9 @@ final class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        3
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -146,11 +147,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellHabit.indetifer, for: indexPath) as? CellHabit else { return UITableViewCell() }
             return cell
-        default:
+        case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: DoneHabitCell.indetifier, for: indexPath) as? DoneHabitCell else { return UITableViewCell()}
             return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MissedHobitCell.indetifier, for: indexPath) as? MissedHobitCell else { return UITableViewCell()}
+            return cell
         }
-        return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -161,6 +164,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
         cell.layer.mask = maskLayer
+
+        switch indexPath.row {
+        case 0: break
+        case 1: break
+        default: cell.alpha = 0.5
+        }
     }
 
 
