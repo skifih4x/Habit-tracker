@@ -28,6 +28,10 @@
 		37CAB025297F50D600A665E5 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01E297F50D500A665E5 /* Manrope-Bold.ttf */; };
 		37CAB026297F50D600A665E5 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01F297F50D500A665E5 /* Manrope-ExtraLight.ttf */; };
 		37CAB0292981C7D100A665E5 /* AddHabitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB0282981C7D100A665E5 /* AddHabitScreen.swift */; };
+		37CAB02C2983215F00A665E5 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB02B2983215F00A665E5 /* ListItem.swift */; };
+		37CAB02E2983219D00A665E5 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB02D2983219D00A665E5 /* ListSection.swift */; };
+		37CAB0342983223100A665E5 /* FirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB0332983223100A665E5 /* FirstSectionCell.swift */; };
+		37CAB03A2983231000A665E5 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB0392983231000A665E5 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +57,10 @@
 		37CAB01E297F50D500A665E5 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		37CAB01F297F50D500A665E5 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
 		37CAB0282981C7D100A665E5 /* AddHabitScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitScreen.swift; sourceTree = "<group>"; };
+		37CAB02B2983215F00A665E5 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		37CAB02D2983219D00A665E5 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
+		37CAB0332983223100A665E5 /* FirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSectionCell.swift; sourceTree = "<group>"; };
+		37CAB0392983231000A665E5 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				00FD1DD5297ED557006797F5 /* MainViewController.swift */,
+				37CAB0392983231000A665E5 /* MockData.swift */,
+				37CAB0302983220700A665E5 /* Cells */,
 				37CAB0282981C7D100A665E5 /* AddHabitScreen.swift */,
+				37CAB02A2983212800A665E5 /* Layout view */,
 				007CCB2C2982B4D100DBDDF4 /* Cell */,
 			);
 			path = Main;
@@ -198,6 +209,23 @@
 				37CAB01B297F50D500A665E5 /* Manrope-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		37CAB02A2983212800A665E5 /* Layout view */ = {
+			isa = PBXGroup;
+			children = (
+				37CAB02B2983215F00A665E5 /* ListItem.swift */,
+				37CAB02D2983219D00A665E5 /* ListSection.swift */,
+			);
+			path = "Layout view";
+			sourceTree = "<group>";
+		};
+		37CAB0302983220700A665E5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				37CAB0332983223100A665E5 /* FirstSectionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,8 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CAB02C2983215F00A665E5 /* ListItem.swift in Sources */,
 				37CAB0292981C7D100A665E5 /* AddHabitScreen.swift in Sources */,
+				37CAB0342983223100A665E5 /* FirstSectionCell.swift in Sources */,
 				0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */,
+				37CAB03A2983231000A665E5 /* MockData.swift in Sources */,
 				00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */,
 				007CCB2E2982B4FF00DBDDF4 /* CellHabit.swift in Sources */,
 				00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */,
@@ -292,6 +323,7 @@
 				0079C04429816BBB00073F3B /* CustomTabBar.swift in Sources */,
 				00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */,
 				0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */,
+				37CAB02E2983219D00A665E5 /* ListSection.swift in Sources */,
 				37CAB018297F4ACC00A665E5 /* Theme.swift in Sources */,
 				0065AA6B2984566D00E201BA /* DoneHabitCell.swift in Sources */,
 			);
