@@ -13,26 +13,20 @@ struct MockData {
     
     private let firstSection: ListSection = {
         .first([
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-            .init(label: " ", image: UIImage(named: "HabitIcon")!),
-        ])
-    }()
-    
-    private let secondSection: ListSection = {
-        .second([
-            .init(label: " ", image: nil)
+            .init(image: UIImage(named: "HabitIcon")!),
+            .init(image: UIImage(named: "HabitIcon")!),
+            .init(image: UIImage(named: "HabitIcon")!),
+            .init(image: UIImage(named: "HabitIcon")!),
+            .init(image: UIImage(named: "HabitIcon")!),
+            .init(image: UIImage(named: "HabitIcon")!),
+            .init(image: UIImage(named: "HabitIcon")!),
+            .init(image: UIImage(named: "HabitIcon")!),
+            .init(image: UIImage(named: "HabitIcon")!),
+            .init(image: UIImage(named: "HabitIcon")!),
         ])
     }()
     
     var pageData: [ListSection] {
-        [firstSection, secondSection]
+        [firstSection]
     }
 }

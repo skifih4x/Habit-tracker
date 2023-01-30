@@ -9,12 +9,12 @@ import UIKit
 
 enum ListSection {
     case first([ListItem])
-    case second([ListItem])
+//    case second([ListItem])
     
     // Define sections
     var items: [ListItem] {
         switch self {
-        case .first(let items), .second(let items):
+        case .first(let items):
             return items
         }
     }
@@ -30,12 +30,6 @@ enum ListSection {
         case .first(_):
             return NSAttributedString(
                 string:"Выберите иконку привычки",
-                attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
-                             NSAttributedString.Key.font: UIFont(name: "Manrope-Regular", size: 20) as Any]
-            )
-        case .second(_):
-            return NSAttributedString(
-                string:"Повторять по дням недели",
                 attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
                              NSAttributedString.Key.font: UIFont(name: "Manrope-Regular", size: 20) as Any]
             )

@@ -27,7 +27,6 @@
 		37CAB02C2983215F00A665E5 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB02B2983215F00A665E5 /* ListItem.swift */; };
 		37CAB02E2983219D00A665E5 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB02D2983219D00A665E5 /* ListSection.swift */; };
 		37CAB0342983223100A665E5 /* FirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB0332983223100A665E5 /* FirstSectionCell.swift */; };
-		37CAB0362983224000A665E5 /* SecondSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB0352983224000A665E5 /* SecondSectionCell.swift */; };
 		37CAB03A2983231000A665E5 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB0392983231000A665E5 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		37CAB02B2983215F00A665E5 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		37CAB02D2983219D00A665E5 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		37CAB0332983223100A665E5 /* FirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSectionCell.swift; sourceTree = "<group>"; };
-		37CAB0352983224000A665E5 /* SecondSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSectionCell.swift; sourceTree = "<group>"; };
 		37CAB0392983231000A665E5 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				37CAB0332983223100A665E5 /* FirstSectionCell.swift */,
-				37CAB0352983224000A665E5 /* SecondSectionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -312,7 +309,6 @@
 				00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */,
 				0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */,
 				0079C04429816BBB00073F3B /* CustomTabBar.swift in Sources */,
-				37CAB0362983224000A665E5 /* SecondSectionCell.swift in Sources */,
 				00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */,
 				0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */,
 				37CAB02E2983219D00A665E5 /* ListSection.swift in Sources */,

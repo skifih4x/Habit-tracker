@@ -13,6 +13,9 @@ class FirstSectionCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "HabitIcon")
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.borderWidth = 1
+        imageView.layer.backgroundColor = Theme.buttonAccentLight.cgColor
+        imageView.layer.cornerRadius = frame.width / 2
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -32,9 +35,10 @@ class FirstSectionCell: UICollectionViewCell {
     private func setupView() {
         addSubview(habitImageView)
         backgroundColor = Theme.backgroundLight
+        self.clipsToBounds = true
     }
     
-    func configureCell(title: String?, image: UIImage) {
+    func configureCell(image: UIImage) {
         habitImageView.image = image
     }
     
@@ -45,8 +49,8 @@ class FirstSectionCell: UICollectionViewCell {
             habitImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             habitImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            habitImageView.heightAnchor.constraint(equalToConstant: 56),
-            habitImageView.widthAnchor.constraint(equalToConstant: 56)
+//            habitImageView.heightAnchor.constraint(equalToConstant: 56),
+//            habitImageView.widthAnchor.constraint(equalToConstant: 56)
         ])
     }
     
