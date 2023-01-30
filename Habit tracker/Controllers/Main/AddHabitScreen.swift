@@ -54,6 +54,7 @@ final class AddHabitScreen: UIViewController {
         ), for: .normal)
         button.layer.cornerRadius = 20
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(addHabitAction), for: .touchUpInside)
         return button
     }()
     
@@ -248,7 +249,7 @@ final class AddHabitScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.title = "Создать новую привычку"
         
         setupStyle()
@@ -259,7 +260,9 @@ final class AddHabitScreen: UIViewController {
     }
     
 
-    
+    @objc private func addHabitAction() {
+        navigationController?.pushViewController(TabBarContoller(), animated: true)
+    }
     //MARK: - Style
     
     private func setupStyle() {
