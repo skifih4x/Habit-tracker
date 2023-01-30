@@ -10,7 +10,11 @@
 		0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E2297EE62D00353EF1 /* OnboardingViewController.swift */; };
 		0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E4297EE67700353EF1 /* TabBarContoller.swift */; };
 		0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E8E6297EF2F700353EF1 /* CalendarViewController.swift */; };
+		0065AA6B2984566D00E201BA /* DoneHabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065AA6A2984566D00E201BA /* DoneHabitCell.swift */; };
 		0079C04429816BBB00073F3B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2951329807EBD00C486BE /* CustomTabBar.swift */; };
+		007CCB292982AD9D00DBDDF4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 007CCB282982AD9D00DBDDF4 /* Realm */; };
+		007CCB2B2982AD9D00DBDDF4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 007CCB2A2982AD9D00DBDDF4 /* RealmSwift */; };
+		007CCB2E2982B4FF00DBDDF4 /* CellHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007CCB2D2982B4FF00DBDDF4 /* CellHabit.swift */; };
 		00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD1297ED557006797F5 /* AppDelegate.swift */; };
 		00FD1DD4297ED557006797F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD3297ED557006797F5 /* SceneDelegate.swift */; };
 		00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD5297ED557006797F5 /* MainViewController.swift */; };
@@ -34,13 +38,8 @@
 		0053E8E2297EE62D00353EF1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		0053E8E4297EE67700353EF1 /* TabBarContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContoller.swift; sourceTree = "<group>"; };
 		0053E8E6297EF2F700353EF1 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		00CF56E6297F4AD200DBE062 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
-		00CF56E7297F4AD200DBE062 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
-		00CF56E8297F4AD200DBE062 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
-		00CF56E9297F4AD200DBE062 /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
-		00CF56EA297F4AD200DBE062 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
-		00CF56EB297F4AD200DBE062 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
-		00CF56EC297F4AD200DBE062 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		0065AA6A2984566D00E201BA /* DoneHabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneHabitCell.swift; sourceTree = "<group>"; };
+		007CCB2D2982B4FF00DBDDF4 /* CellHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHabit.swift; sourceTree = "<group>"; };
 		00D2951329807EBD00C486BE /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		00FD1DCE297ED557006797F5 /* Habit tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FD1DD1297ED557006797F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,12 +68,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007CCB2B2982AD9D00DBDDF4 /* RealmSwift in Frameworks */,
+				007CCB292982AD9D00DBDDF4 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007CCB262982AC2900DBDDF4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0053E8E4297EE67700353EF1 /* TabBarContoller.swift */,
+				00D2951329807EBD00C486BE /* CustomTabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		007CCB2C2982B4D100DBDDF4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				007CCB2D2982B4FF00DBDDF4 /* CellHabit.swift */,
+				0065AA6A2984566D00E201BA /* DoneHabitCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		00CC7EEE297EF6AC004B0DC2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +111,7 @@
 		00CC7EF0297EF6B7004B0DC2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0053E8E4297EE67700353EF1 /* TabBarContoller.swift */,
-				00D2951329807EBD00C486BE /* CustomTabBar.swift */,
+				007CCB262982AC2900DBDDF4 /* TabBar */,
 				00CC7EF4297EF78D004B0DC2 /* Onboarding */,
 				00CC7EF3297EF782004B0DC2 /* Main */,
 				00CC7EF5297EF796004B0DC2 /* Calendar */,
@@ -115,7 +133,6 @@
 		00CC7EF2297EF6F4004B0DC2 /* Resurces */ = {
 			isa = PBXGroup;
 			children = (
-				00CF56E5297F4AC600DBE062 /* Font */,
 				00FD1DDA297ED558006797F5 /* Assets.xcassets */,
 				00FD1DDC297ED558006797F5 /* LaunchScreen.storyboard */,
 				37CAB027297F50DE00A665E5 /* Fonts */,
@@ -131,6 +148,7 @@
 				37CAB0302983220700A665E5 /* Cells */,
 				37CAB0282981C7D100A665E5 /* AddHabitScreen.swift */,
 				37CAB02A2983212800A665E5 /* Layout view */,
+				007CCB2C2982B4D100DBDDF4 /* Cell */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -149,20 +167,6 @@
 				0053E8E6297EF2F700353EF1 /* CalendarViewController.swift */,
 			);
 			path = Calendar;
-			sourceTree = "<group>";
-		};
-		00CF56E5297F4AC600DBE062 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				00CF56EB297F4AD200DBE062 /* Manrope-Bold.ttf */,
-				00CF56EA297F4AD200DBE062 /* Manrope-ExtraBold.ttf */,
-				00CF56E7297F4AD200DBE062 /* Manrope-ExtraLight.ttf */,
-				00CF56E9297F4AD200DBE062 /* Manrope-Light.ttf */,
-				00CF56E8297F4AD200DBE062 /* Manrope-Medium.ttf */,
-				00CF56E6297F4AD200DBE062 /* Manrope-Regular.ttf */,
-				00CF56EC297F4AD200DBE062 /* Manrope-SemiBold.ttf */,
-			);
-			path = Font;
 			sourceTree = "<group>";
 		};
 		00FD1DC5297ED557006797F5 = {
@@ -240,6 +244,10 @@
 			dependencies = (
 			);
 			name = "Habit tracker";
+			packageProductDependencies = (
+				007CCB282982AD9D00DBDDF4 /* Realm */,
+				007CCB2A2982AD9D00DBDDF4 /* RealmSwift */,
+			);
 			productName = "Habit tracker";
 			productReference = 00FD1DCE297ED557006797F5 /* Habit tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -268,6 +276,9 @@
 				Base,
 			);
 			mainGroup = 00FD1DC5297ED557006797F5;
+			packageReferences = (
+				007CCB272982AD9D00DBDDF4 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 00FD1DCF297ED557006797F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -306,6 +317,7 @@
 				0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */,
 				37CAB03A2983231000A665E5 /* MockData.swift in Sources */,
 				00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */,
+				007CCB2E2982B4FF00DBDDF4 /* CellHabit.swift in Sources */,
 				00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */,
 				0053E8E5297EE67700353EF1 /* TabBarContoller.swift in Sources */,
 				0079C04429816BBB00073F3B /* CustomTabBar.swift in Sources */,
@@ -313,6 +325,7 @@
 				0053E8E3297EE62D00353EF1 /* OnboardingViewController.swift in Sources */,
 				37CAB02E2983219D00A665E5 /* ListSection.swift in Sources */,
 				37CAB018297F4ACC00A665E5 /* Theme.swift in Sources */,
+				0065AA6B2984566D00E201BA /* DoneHabitCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +533,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		007CCB272982AD9D00DBDDF4 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.34.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		007CCB282982AD9D00DBDDF4 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 007CCB272982AD9D00DBDDF4 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		007CCB2A2982AD9D00DBDDF4 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 007CCB272982AD9D00DBDDF4 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00FD1DC6297ED557006797F5 /* Project object */;
 }
