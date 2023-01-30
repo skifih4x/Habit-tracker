@@ -39,7 +39,7 @@ final class TabBarContoller: UITabBarController, UITabBarControllerDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        navigationItem.setHidesBackButton(true, animated: false)
         let mainVC = MainViewController()
         let mainTabBarItem = UITabBarItem(title: "", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_fill"))
         mainVC.tabBarItem = mainTabBarItem

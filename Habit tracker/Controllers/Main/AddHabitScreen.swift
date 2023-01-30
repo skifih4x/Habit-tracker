@@ -258,7 +258,7 @@ final class AddHabitScreen: UIViewController {
         setCollectionView()
     }
     
-    
+
     
     //MARK: - Style
     
