@@ -183,6 +183,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         deleteAction.backgroundColor = Theme.deleteBackground
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
 
 }
 
