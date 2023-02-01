@@ -132,14 +132,14 @@ final class OnboardingViewController: UIViewController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
         
-            onboardingImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 208),
+//            onboardingImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 208),
             onboardingImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             onboardingImageView.heightAnchor.constraint(equalToConstant: 256),
             onboardingImageView.widthAnchor.constraint(equalToConstant: 256),
             
             stackView.topAnchor.constraint(equalTo: onboardingImageView.bottomAnchor, constant: 56),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 44),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -44),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: startButton.topAnchor, constant: -38),
             stackView.heightAnchor.constraint(equalToConstant: 106),
             stackView.widthAnchor.constraint(equalToConstant: 304),
