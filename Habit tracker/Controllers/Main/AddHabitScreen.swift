@@ -8,14 +8,16 @@
 import UIKit
 
 final class AddHabitScreen: UIViewController {
+    //H 926
+    //W 428
     
+    //MARK: - UI Elements
     
-    //MARK: - UIElements
-    // First Section
+    //MARK: First Section
     private lazy var habitLabel: UILabel = {
         let label = UILabel()
         label.text = "Название"
-        label.font = UIFont(name: "Manrope-Regular", size: 20)
+        label.font = UIFont(name: "Manrope-Regular", size: view.frame.height * 0.02159)
         label.textColor = Theme.textDark
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +60,7 @@ final class AddHabitScreen: UIViewController {
         return button
     }()
     
-    //Second Section
+    //MARK: Second Section
     
     let sections = MockData.shared.pageData
     private var firstSection: [ListItem] = []
@@ -66,7 +68,7 @@ final class AddHabitScreen: UIViewController {
     private lazy var imageChooseLabel: UILabel = {
         let label = UILabel()
         label.text = "Выберите иконку привычки"
-        label.font = UIFont(name: "Manrope-Regular", size: 20)
+        label.font = UIFont(name: "Manrope-Regular", size: view.frame.height * 0.02159)
         label.textColor = Theme.textDark
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -76,12 +78,12 @@ final class AddHabitScreen: UIViewController {
     var imageCollectionView: UICollectionView!
     
     
-    //Third Section
+    //MARK: Third Section
     
     private lazy var dayChooseLabel: UILabel = {
         let label = UILabel()
         label.text = "Повторять по дням недели"
-        label.font = UIFont(name: "Manrope-Regular", size: 20)
+        label.font = UIFont(name: "Manrope-Regular", size: view.frame.height * 0.02159)
         label.textColor = Theme.textDark
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -369,7 +371,7 @@ extension AddHabitScreen {
             textInputField.topAnchor.constraint(equalTo: habitLabel.bottomAnchor, constant: 10),
             textInputField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             textInputField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            textInputField.heightAnchor.constraint(equalToConstant: 48),
+            textInputField.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
             //            textInputField.widthAnchor.constraint(equalToConstant: 336),
             
             imageChooseLabel.topAnchor.constraint(equalTo: textInputField.bottomAnchor, constant: 32),
@@ -385,35 +387,35 @@ extension AddHabitScreen {
             daysStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             daysStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             daysStackView.bottomAnchor.constraint(equalTo: addButton.topAnchor, constant: -270),
-            daysStackView.heightAnchor.constraint(equalToConstant: 48),
+            daysStackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05283),
             
-            mondayButton.heightAnchor.constraint(equalToConstant: 48),
-            tuesdayButton.heightAnchor.constraint(equalToConstant: 48),
-            wednesdayButton.heightAnchor.constraint(equalToConstant: 48),
-            thursdayButton.heightAnchor.constraint(equalToConstant: 48),
-            fridayButton.heightAnchor.constraint(equalToConstant: 48),
-            satursdayButton.heightAnchor.constraint(equalToConstant: 48),
-            sundayButton.heightAnchor.constraint(equalToConstant: 48),
+            mondayButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            tuesdayButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            wednesdayButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            thursdayButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            fridayButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            satursdayButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            sundayButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
             
-            mondayButton.widthAnchor.constraint(equalToConstant: 48),
-            tuesdayButton.widthAnchor.constraint(equalToConstant: 48),
-            wednesdayButton.widthAnchor.constraint(equalToConstant: 48),
-            thursdayButton.widthAnchor.constraint(equalToConstant: 48),
-            fridayButton.widthAnchor.constraint(equalToConstant: 48),
-            satursdayButton.widthAnchor.constraint(equalToConstant: 48),
-            sundayButton.widthAnchor.constraint(equalToConstant: 48),
+            mondayButton.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            tuesdayButton.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            wednesdayButton.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            thursdayButton.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            fridayButton.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            satursdayButton.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
+            sundayButton.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
             
-            separator1.heightAnchor.constraint(equalToConstant: 32),
+            separator1.heightAnchor.constraint(equalTo: daysStackView.heightAnchor, multiplier: 0.66),
             separator1.widthAnchor.constraint(equalToConstant: 1),
-            separator2.heightAnchor.constraint(equalToConstant: 32),
+            separator2.heightAnchor.constraint(equalTo: daysStackView.heightAnchor, multiplier: 0.66),
             separator2.widthAnchor.constraint(equalToConstant: 1),
-            separator3.heightAnchor.constraint(equalToConstant: 32),
+            separator3.heightAnchor.constraint(equalTo: daysStackView.heightAnchor, multiplier: 0.66),
             separator3.widthAnchor.constraint(equalToConstant: 1),
-            separator4.heightAnchor.constraint(equalToConstant: 32),
+            separator4.heightAnchor.constraint(equalTo: daysStackView.heightAnchor, multiplier: 0.66),
             separator4.widthAnchor.constraint(equalToConstant: 1),
-            separator5.heightAnchor.constraint(equalToConstant: 32),
+            separator5.heightAnchor.constraint(equalTo: daysStackView.heightAnchor, multiplier: 0.66),
             separator5.widthAnchor.constraint(equalToConstant: 1),
-            separator6.heightAnchor.constraint(equalToConstant: 32),
+            separator6.heightAnchor.constraint(equalTo: daysStackView.heightAnchor, multiplier: 0.66),
             separator6.widthAnchor.constraint(equalToConstant: 1),
             
             
@@ -493,6 +495,12 @@ import SwiftUI
 struct ListProvider: PreviewProvider {
     static var previews: some View {
         ContainterView().edgesIgnoringSafeArea(.all)
+            .previewDevice("iPhone 12 Pro Max")
+            .previewDisplayName("iPhone 12 Pro Max")
+        
+        ContainterView().edgesIgnoringSafeArea(.all)
+            .previewDevice("iPhone SE (3rd generation)")
+            .previewDisplayName("iPhone SE (3rd generation)")
     }
     
     struct ContainterView: UIViewControllerRepresentable {
