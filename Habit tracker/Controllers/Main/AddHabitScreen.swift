@@ -294,7 +294,7 @@ final class AddHabitScreen: UIViewController {
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = .init(width: 65, height: 65)
+        layout.itemSize = .init(width: view.frame.height * 0.075, height: view.frame.height * 0.075)
         
         return layout
     }
@@ -386,7 +386,7 @@ extension AddHabitScreen {
             daysStackView.topAnchor.constraint(equalTo: dayChooseLabel.bottomAnchor, constant: 20),
             daysStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             daysStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            daysStackView.bottomAnchor.constraint(equalTo: addButton.topAnchor, constant: -270),
+            daysStackView.bottomAnchor.constraint(equalTo: addButton.topAnchor, constant: view.frame.height * -0.29157),
             daysStackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05283),
             
             mondayButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05183),
