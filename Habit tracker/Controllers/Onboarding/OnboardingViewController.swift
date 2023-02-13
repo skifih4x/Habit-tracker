@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+//H 926
+//W 428
 final class OnboardingViewController: UIViewController {
 
     private lazy var mainImage: UIImageView = {
@@ -88,7 +89,6 @@ final class OnboardingViewController: UIViewController {
     private let startButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = Theme.buttonAccentDark
-//        button.configuration?.contentInsets = .init(top: 4, leading: 5, bottom: 0, trailing: 5)
         button.setTitle("Давай", for: [])
         button.titleLabel?.font = UIFont(name: Theme.fontName, size: 16)
         button.setTitleColor(Theme.textLight, for: .normal)
@@ -132,7 +132,6 @@ final class OnboardingViewController: UIViewController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
         
-//            onboardingImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 208),
             onboardingImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             onboardingImageView.heightAnchor.constraint(equalToConstant: 256),
             onboardingImageView.widthAnchor.constraint(equalToConstant: 256),
