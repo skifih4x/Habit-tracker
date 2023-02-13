@@ -10,39 +10,7 @@ import UIKit
 //W 428
 final class OnboardingViewController: UIViewController {
 
-    private lazy var mainImage: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "startImage")
-        image.contentMode = .scaleAspectFit
-        image.translatesAutoresizingMaskIntoConstraints = false
-        return image
-    }()
-
-    private lazy var firstLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Будь творцом своей жизни!"
-        label.font = UIFont(name: Theme.fontName, size: Theme.fontSize20)
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    private lazy var subLabel: UILabel = {
-        let label = UILabel()
-        label.text =
-                """
-                Добро пожаловать.
-                Давай начнем планировать
-                твой день!
-                """
-        label.font = UIFont(name: Theme.fontName, size: Theme.fontSize14)
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    private let onboardingImageView: UIImageView = {
+    private lazy var onboardingImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "OnboardingImage")
         imageView.contentMode = .scaleAspectFit
@@ -51,17 +19,17 @@ final class OnboardingViewController: UIViewController {
         return imageView
     }()
     
-    private let headerLabel: UILabel = {
+    private lazy var headerLabel: UILabel = {
         let label = UILabel()
         label.text = "Будь творцом своей жизни!"
         label.textColor = Theme.textDark
-        label.font = UIFont(name: Theme.fontBoldName, size: Theme.fontSize20)
+        label.font = UIFont(name: Theme.fontBoldName, size: view.frame.height * Theme.fontSize20)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private let subHeaderLabel1: UILabel = {
+    private lazy var subHeaderLabel1: UILabel = {
         let label = UILabel()
         label.text = """
 Добро пожаловать.
@@ -70,7 +38,7 @@ final class OnboardingViewController: UIViewController {
 """
         label.numberOfLines = 0
         label.textColor = Theme.textDark
-        label.font = UIFont(name: Theme.fontName, size: Theme.fontSize14)
+        label.font = UIFont(name: Theme.fontName, size: view.frame.height * Theme.fontSize16)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -86,13 +54,13 @@ final class OnboardingViewController: UIViewController {
         return stack
     }()
     
-    private let startButton: UIButton = {
+    private lazy var startButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = Theme.buttonAccentDark
         button.setTitle("Давай", for: [])
-        button.titleLabel?.font = UIFont(name: Theme.fontName, size: Theme.fontSize16)
+        button.titleLabel?.font = UIFont(name: Theme.fontName, size: view.frame.height * Theme.fontSize20)
         button.setTitleColor(Theme.textLight, for: .normal)
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = view.frame.height * 0.02699
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -150,5 +118,31 @@ final class OnboardingViewController: UIViewController {
             startButton.widthAnchor.constraint(equalToConstant: view.frame.height * 0.34557)
             
         ])
+    }
+}
+
+import SwiftUI
+struct ListProvider1: PreviewProvider {
+    static var previews: some View {
+        ContainterView().edgesIgnoringSafeArea(.all)
+            .previewDevice("iPhone 12 Pro Max")
+            .previewDisplayName("iPhone 12 Pro Max")
+        
+        ContainterView().edgesIgnoringSafeArea(.all)
+            .previewDevice("iPhone SE (3rd generation)")
+            .previewDisplayName("iPhone SE (3rd generation)")
+    }
+    
+    struct ContainterView: UIViewControllerRepresentable {
+        let listVC = OnboardingViewController()
+        func makeUIViewController(context:
+                                  UIViewControllerRepresentableContext<ListProvider1.ContainterView>) -> OnboardingViewController {
+            return listVC
+        }
+        
+        func updateUIViewController(_ uiViewController:
+                                    ListProvider1.ContainterView.UIViewControllerType, context:
+                                    UIViewControllerRepresentableContext<ListProvider1.ContainterView>) {
+        }
     }
 }
