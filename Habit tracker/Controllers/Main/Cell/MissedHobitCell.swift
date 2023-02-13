@@ -21,7 +21,7 @@ final class MissedHobitCell: UITableViewCell {
     private var nameHabit: UILabel = {
         let label = UILabel()
         label.text = "Утренний бег"
-        label.font = UIFont(name: "Manrope-Regular", size: 17)
+        label.font = UIFont(name: Theme.fontName, size: 17)
         label.textColor = #colorLiteral(red: 0.0229173284, green: 0.1207512096, blue: 0.2747300565, alpha: 1)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ final class MissedHobitCell: UITableViewCell {
     private var doneHabitButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("Привычка пропущенна!", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Manrope-Regular", size: 11)
+        button.titleLabel?.font = UIFont(name: Theme.fontName, size: 11)
         button.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
         button.imageView?.tintColor = #colorLiteral(red: 0.2927370965, green: 0.4645472765, blue: 0.7684565783, alpha: 1)
         button.setTitleColor(.black, for: .normal)

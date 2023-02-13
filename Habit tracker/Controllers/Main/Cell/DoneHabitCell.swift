@@ -22,7 +22,7 @@ final class DoneHabitCell: UITableViewCell {
     private var nameHabit: UILabel = {
         let label = UILabel()
         label.text = "Утренний бег"
-        label.font = UIFont(name: "Manrope-Regular", size: 17)
+        label.font = UIFont(name: Theme.fontName, size: 17)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -31,7 +31,7 @@ final class DoneHabitCell: UITableViewCell {
     private var doneHabitButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("Привычка выполнена!", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Manrope-Regular", size: 11)
+        button.titleLabel?.font = UIFont(name: Theme.fontName, size: 11)
         button.setImage(UIImage(named: "checkImage"), for: .normal)
         button.imageView?.tintColor = .white
         button.setTitleColor(.black, for: .normal)
