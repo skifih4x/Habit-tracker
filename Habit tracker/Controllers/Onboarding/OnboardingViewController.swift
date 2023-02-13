@@ -21,7 +21,7 @@ final class OnboardingViewController: UIViewController {
     private lazy var firstLabel: UILabel = {
         let label = UILabel()
         label.text = "Будь творцом своей жизни!"
-        label.font = UIFont(name: "Manrope-SemiBold", size: 20)
+        label.font = UIFont(name: Theme.fontName, size: Theme.fontSize20)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -35,7 +35,7 @@ final class OnboardingViewController: UIViewController {
                 Давай начнем планировать
                 твой день!
                 """
-        label.font = UIFont(name: "Manrope-Regular", size: 14)
+        label.font = UIFont(name: Theme.fontName, size: Theme.fontSize14)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +55,7 @@ final class OnboardingViewController: UIViewController {
         let label = UILabel()
         label.text = "Будь творцом своей жизни!"
         label.textColor = Theme.textDark
-        label.font = UIFont(name: Theme.fontBoldName, size: 20)
+        label.font = UIFont(name: Theme.fontBoldName, size: Theme.fontSize20)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -70,7 +70,7 @@ final class OnboardingViewController: UIViewController {
 """
         label.numberOfLines = 0
         label.textColor = Theme.textDark
-        label.font = UIFont(name: Theme.fontName, size: 14)
+        label.font = UIFont(name: Theme.fontName, size: Theme.fontSize14)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -90,7 +90,7 @@ final class OnboardingViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = Theme.buttonAccentDark
         button.setTitle("Давай", for: [])
-        button.titleLabel?.font = UIFont(name: Theme.fontName, size: 16)
+        button.titleLabel?.font = UIFont(name: Theme.fontName, size: Theme.fontSize16)
         button.setTitleColor(Theme.textLight, for: .normal)
         button.layer.cornerRadius = 25
         button.layer.masksToBounds = true
@@ -133,21 +133,21 @@ final class OnboardingViewController: UIViewController {
         NSLayoutConstraint.activate([
         
             onboardingImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            onboardingImageView.heightAnchor.constraint(equalToConstant: 256),
-            onboardingImageView.widthAnchor.constraint(equalToConstant: 256),
+            onboardingImageView.heightAnchor.constraint(equalToConstant: view.frame.height * 0.27645),
+            onboardingImageView.widthAnchor.constraint(equalToConstant: view.frame.height * 0.27645),
             
-            stackView.topAnchor.constraint(equalTo: onboardingImageView.bottomAnchor, constant: 56),
+            stackView.topAnchor.constraint(equalTo: onboardingImageView.bottomAnchor, constant: view.frame.height * 0.06047),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: startButton.topAnchor, constant: -38),
-            stackView.heightAnchor.constraint(equalToConstant: 106),
-            stackView.widthAnchor.constraint(equalToConstant: 304),
+            stackView.bottomAnchor.constraint(equalTo: startButton.topAnchor, constant: view.frame.height * -0.04103),
+            stackView.heightAnchor.constraint(equalToConstant: view.frame.height * 0.11447),
+            stackView.widthAnchor.constraint(equalToConstant: view.frame.height * 0.32829),
             
-            startButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
-            startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
-            startButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
-            startButton.heightAnchor.constraint(equalToConstant: 48),
-            startButton.widthAnchor.constraint(equalToConstant: 320)
+            startButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: view.frame.height * 0.03779),
+            startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: view.frame.height * -0.03779),
+            startButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: view.frame.height * -0.10799),
+            startButton.heightAnchor.constraint(equalToConstant: view.frame.height * 0.05183),
+            startButton.widthAnchor.constraint(equalToConstant: view.frame.height * 0.34557)
             
         ])
     }

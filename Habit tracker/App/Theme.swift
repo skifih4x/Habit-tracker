@@ -28,6 +28,7 @@ enum Theme {
     static let buttonCornerRadius: CGFloat = 20
     static let fontSize20: CGFloat = 0.02159
     static let fontSize14: CGFloat = 0.01511
+    static let fontSize16: CGFloat = 0.01727
     
     // MARK: - Layout
     static let spacing: CGFloat = 20
