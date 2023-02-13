@@ -287,10 +287,10 @@ final class AddHabitScreen: UIViewController {
         imageCollectionView.backgroundColor = Theme.backgroundLight
         
         NSLayoutConstraint.activate([
-            imageCollectionView.topAnchor.constraint(equalTo: imageChooseLabel.bottomAnchor, constant: 10),
+            imageCollectionView.topAnchor.constraint(equalTo: imageChooseLabel.bottomAnchor, constant: view.frame.height * Theme.topOffset),
             imageCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             imageCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            imageCollectionView.bottomAnchor.constraint(equalTo: dayChooseLabel.topAnchor, constant: -32)
+            imageCollectionView.bottomAnchor.constraint(equalTo: dayChooseLabel.topAnchor, constant: view.frame.height * -0.005)
         ])
         
         imageCollectionView.register(FirstSectionCell.self, forCellWithReuseIdentifier: "FirstSectionCell")

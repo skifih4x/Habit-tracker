@@ -19,7 +19,7 @@ class CustomTabBar: UITabBar {
         let conf = UIImage.SymbolConfiguration(pointSize: 35, weight: .light)
         let image = UIImage(systemName: "plus", withConfiguration: conf)
         middleButton.setImage(image, for: .normal)
-        middleButton.backgroundColor = Theme.backgroundLight
+        middleButton.backgroundColor = Theme.buttonAccentLight
         middleButton.tintColor = Theme.buttonAccentDark
         middleButton.layer.cornerRadius = 0.5 * middleButton.bounds.size.width
 

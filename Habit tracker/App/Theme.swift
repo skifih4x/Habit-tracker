@@ -33,6 +33,6 @@ enum Theme {
     // MARK: - Layout
     static let spacing: CGFloat = 20
     static let leftOffset: CGFloat = 20
-    static let topOffset: CGFloat = 10
+    static let topOffset: CGFloat = 0.01079
     static let multiplier: CGFloat = 0.05183
 }
