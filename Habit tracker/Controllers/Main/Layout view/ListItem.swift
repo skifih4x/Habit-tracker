@@ -10,6 +10,5 @@ import Foundation
 import UIKit
 
 struct ListItem {
-//    let label: String?
     let image: UIImage
 }

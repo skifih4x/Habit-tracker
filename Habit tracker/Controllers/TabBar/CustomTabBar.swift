@@ -19,8 +19,8 @@ class CustomTabBar: UITabBar {
         let conf = UIImage.SymbolConfiguration(pointSize: 35, weight: .light)
         let image = UIImage(systemName: "plus", withConfiguration: conf)
         middleButton.setImage(image, for: .normal)
-        middleButton.backgroundColor = #colorLiteral(red: 0.7607843137, green: 0.8352941176, blue: 1, alpha: 1)
-        middleButton.tintColor = #colorLiteral(red: 0.231372549, green: 0.3764705882, blue: 0.7176470588, alpha: 1)
+        middleButton.backgroundColor = Theme.buttonAccentLight
+        middleButton.tintColor = Theme.buttonAccentDark
         middleButton.layer.cornerRadius = 0.5 * middleButton.bounds.size.width
 
         middleButton.addTarget(self, action: #selector(self.middleButtonAction), for: .touchUpInside)
@@ -34,7 +34,7 @@ class CustomTabBar: UITabBar {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).cgColor
+        self.layer.shadowColor = #colorLiteral(red: 0.976000011, green: 0.9570000172, blue: 0.9250000119, alpha: 1).cgColor
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         self.layer.shadowRadius = 4.0
         self.layer.shadowOpacity = 0.4

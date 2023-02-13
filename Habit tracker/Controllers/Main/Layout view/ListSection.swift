@@ -9,7 +9,6 @@ import UIKit
 
 enum ListSection {
     case first([ListItem])
-//    case second([ListItem])
     
     // Define sections
     var items: [ListItem] {

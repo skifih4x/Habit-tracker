@@ -22,7 +22,7 @@ final class CellHabit: UITableViewCell {
     private var nameHabit: UILabel = {
         let label = UILabel()
         label.text = "Утренний бег"
-        label.font = UIFont(name: "Manrope-Regular", size: 17)
+        label.font = UIFont(name: Theme.fontName, size: 17)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -31,14 +31,14 @@ final class CellHabit: UITableViewCell {
     private var skipHabitButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("Пропустить", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Manrope-Regular", size: 11)
+        button.titleLabel?.font = UIFont(name: Theme.fontName, size: 11)
         button.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
         button.imageView?.tintColor = Theme.buttonBorder
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 4
         button.layer.borderWidth = 1
         button.layer.borderColor = Theme.buttonBorder.cgColor
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -9.25, bottom: 0, right: 0)
+//        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -9.25, bottom: 0, right: 0)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -46,13 +46,13 @@ final class CellHabit: UITableViewCell {
     private var doneHabitButton: UIButton = {
         let button = UIButton()
         button.setTitle("Пропустить", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Manrope-Regular", size: 11)
+        button.titleLabel?.font = UIFont(name: Theme.fontName, size: 11)
         button.setImage(UIImage(named: "checkImage"), for: .normal)
         button.imageView?.tintColor = .blue
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 4
         button.backgroundColor = Theme.buttonAccentLight
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -9.25, bottom: 0, right: 0)
+//        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -9.25, bottom: 0, right: 0)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()

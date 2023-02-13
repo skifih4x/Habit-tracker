@@ -25,11 +25,14 @@ enum Theme {
     static let textLight: UIColor = UIColor(named: "TextColorLight") ?? .white
     
     // MARK: - Style
-    static let buttonCornerRadius: CGFloat = 15
-    static let imageCornerRadius: CGFloat = 20
+    static let buttonCornerRadius: CGFloat = 20
+    static let fontSize20: CGFloat = 0.02159
+    static let fontSize14: CGFloat = 0.01511
+    static let fontSize16: CGFloat = 0.01727
     
     // MARK: - Layout
     static let spacing: CGFloat = 20
     static let leftOffset: CGFloat = 20
-    static let topOffset: CGFloat = 10
+    static let topOffset: CGFloat = 0.01079
+    static let multiplier: CGFloat = 0.05183
 }

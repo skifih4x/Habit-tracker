@@ -32,14 +32,14 @@ final class MainViewController: UIViewController {
         let label = UILabel()
         let date = String(DateFormatter.localizedString(from: Date(), dateStyle: .long, timeStyle: .none))
         label.text = date
-        label.font = UIFont(name: "Manrope-Regular", size: 17)
+        label.font = UIFont(name: Theme.fontName, size: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     private lazy var habitTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
-        table.rowHeight = 112
+        table.rowHeight = view.frame.height * 0.12095
         table.backgroundColor = .none
         table.delegate = self
         table.dataSource = self
@@ -191,23 +191,27 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 import SwiftUI
-
-struct PeopleVCProvider1: PreviewProvider {
+struct ListProvider2: PreviewProvider {
     static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-            .previewDevice("iPhone 13 Pro Max")
+        ContainterView().edgesIgnoringSafeArea(.all)
+            .previewDevice("iPhone 12 Pro Max")
+            .previewDisplayName("iPhone 12 Pro Max")
+        
+        ContainterView().edgesIgnoringSafeArea(.all)
+            .previewDevice("iPhone SE (3rd generation)")
+            .previewDisplayName("iPhone SE (3rd generation)")
     }
-
-    struct Container: UIViewControllerRepresentable {
-
-        let tabBarVC = TabBarContoller()
-
-        func makeUIViewController(context: Context) -> some UIViewController {
-            tabBarVC
+    
+    struct ContainterView: UIViewControllerRepresentable {
+        let listVC = MainViewController()
+        func makeUIViewController(context:
+                                  UIViewControllerRepresentableContext<ListProvider2.ContainterView>) -> MainViewController {
+            return listVC
         }
-
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-
+        
+        func updateUIViewController(_ uiViewController:
+                                    ListProvider2.ContainterView.UIViewControllerType, context:
+                                    UIViewControllerRepresentableContext<ListProvider2.ContainterView>) {
         }
     }
 }
