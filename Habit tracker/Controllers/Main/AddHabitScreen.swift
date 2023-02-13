@@ -163,6 +163,7 @@ final class AddHabitScreen: UIViewController {
     let mondayButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 10
+        button.backgroundColor = .white
         button.setAttributedTitle(NSAttributedString(
             string: "пн",
             attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
@@ -175,6 +176,7 @@ final class AddHabitScreen: UIViewController {
     let tuesdayButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 10
+        button.backgroundColor = .white
         button.setAttributedTitle(NSAttributedString(
             string: "вт",
             attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
@@ -187,6 +189,7 @@ final class AddHabitScreen: UIViewController {
     let wednesdayButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 10
+        button.backgroundColor = .white
         button.setAttributedTitle(NSAttributedString(
             string: "ср",
             attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
@@ -199,6 +202,7 @@ final class AddHabitScreen: UIViewController {
     let thursdayButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 10
+        button.backgroundColor = .white
         button.setAttributedTitle(NSAttributedString(
             string: "чт",
             attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
@@ -211,6 +215,7 @@ final class AddHabitScreen: UIViewController {
     let fridayButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 10
+        button.backgroundColor = .white
         button.setAttributedTitle(NSAttributedString(
             string: "пт",
             attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
@@ -223,6 +228,7 @@ final class AddHabitScreen: UIViewController {
     let satursdayButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 10
+        button.backgroundColor = .white
         button.setAttributedTitle(NSAttributedString(
             string: "сб",
             attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
@@ -235,6 +241,7 @@ final class AddHabitScreen: UIViewController {
     let sundayButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 10
+        button.backgroundColor = .white
         button.setAttributedTitle(NSAttributedString(
             string: "вс",
             attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
@@ -327,7 +334,7 @@ final class AddHabitScreen: UIViewController {
         daysStackView.addArrangedSubview(lastSeparator)
         
     }
-#warning ("исправить логику нажатия кнопки")
+    
     private func buttonTapped() {
         mondayButton.addTarget(self, action: #selector(dayButtonTapped), for: .touchUpInside)
         tuesdayButton.addTarget(self, action: #selector(dayButtonTapped), for: .touchUpInside)
@@ -339,15 +346,12 @@ final class AddHabitScreen: UIViewController {
     }
     
     
-    var flag = 0
     @objc private func dayButtonTapped(_ sender: UIButton) {
         
-        if flag == 0 {
+        if sender.backgroundColor == .white {
             sender.backgroundColor = Theme.buttonAccentLight
-            flag = 1
         } else {
             sender.backgroundColor = .white
-            flag = 0
         }
         
     }
