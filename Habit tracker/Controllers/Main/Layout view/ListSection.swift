@@ -30,7 +30,7 @@ enum ListSection {
             return NSAttributedString(
                 string:"Выберите иконку привычки",
                 attributes: [NSAttributedString.Key.foregroundColor: Theme.textDark,
-                             NSAttributedString.Key.font: UIFont(name: "Manrope-Regular", size: 20) as Any]
+                             NSAttributedString.Key.font: UIFont(name: Theme.fontName, size: 20) as Any]
             )
         }
     }

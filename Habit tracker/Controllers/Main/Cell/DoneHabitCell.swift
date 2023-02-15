@@ -38,7 +38,7 @@ final class DoneHabitCell: UITableViewCell {
         button.layer.cornerRadius = 4
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -40.25, bottom: 0, right: 0)
+//        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -40.25, bottom: 0, right: 0)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
