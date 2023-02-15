@@ -45,7 +45,7 @@ final class CellHabit: UITableViewCell {
 
     private var doneHabitButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Пропустить", for: .normal)
+        button.setTitle("Готово", for: .normal)
         button.titleLabel?.font = UIFont(name: Theme.fontName, size: 11)
         button.setImage(UIImage(named: "checkImage"), for: .normal)
         button.imageView?.tintColor = .blue
