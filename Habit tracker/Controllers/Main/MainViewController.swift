@@ -12,7 +12,7 @@ final class MainViewController: UIViewController {
     private lazy var habitLabel: UILabel = {
         let label = UILabel()
         label.text = "Мои привычки"
-        label.font = UIFont(name: "Manrope-ExtraBold", size: 22)
+        label.font = UIFont(name: Theme.fontExtraBold, size: view.frame.height * Theme.fontSize22)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -32,7 +32,7 @@ final class MainViewController: UIViewController {
         let label = UILabel()
         let date = String(DateFormatter.localizedString(from: Date(), dateStyle: .long, timeStyle: .none))
         label.text = date
-        label.font = UIFont(name: Theme.fontName, size: 17)
+        label.font = UIFont(name: Theme.fontName, size: view.frame.height * Theme.fontSize16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -66,7 +66,7 @@ final class MainViewController: UIViewController {
                 Чтобы добавить привычку,
                 нажмите «+»
                 """
-        label.font = UIFont(name: "Manrope-Regular", size: 14)
+        label.font = UIFont(name: Theme.fontName, size: view.frame.height * Theme.fontSize14)
         label.numberOfLines = 0
         label.textAlignment  = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -76,7 +76,7 @@ final class MainViewController: UIViewController {
     private lazy var arrowImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "arrow")
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -84,13 +84,24 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "mainColor")
-        if habitTableView.visibleCells.isEmpty {
-            habitTableView.backgroundColor = .clear
-        } else {
-            habitTableView.backgroundColor = Theme.backgroundLight
-        }
-        layout()
 
+        layout()
+        
+//        if habitTableView.visibleCells.isEmpty {
+//            habitTableView.backgroundColor = .clear
+//        } else {
+//            habitTableView.backgroundColor = Theme.backgroundLight
+//        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        if habitTableView.visibleCells.isEmpty {
+//            habitTableView.backgroundColor = .clear
+//        } else {
+//            habitTableView.backgroundColor = Theme.backgroundLight
+//        }
     }
 
     private func layout() {
@@ -104,15 +115,15 @@ final class MainViewController: UIViewController {
         view.addSubview(habitTableView)
 
         NSLayoutConstraint.activate([
-            habitLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 58),
+            habitLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.06263),
             habitLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             habitLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
 
-            topImage.topAnchor.constraint(equalTo: habitLabel.bottomAnchor, constant: 24),
+            topImage.topAnchor.constraint(equalTo: habitLabel.bottomAnchor, constant: view.frame.height * 0.02591),
             topImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             topImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
 
-            currentDataLabel.topAnchor.constraint(equalTo: topImage.bottomAnchor, constant: 5),
+            currentDataLabel.topAnchor.constraint(equalTo: topImage.bottomAnchor, constant: view.frame.height * 0.00539),
             currentDataLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             currentDataLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 
@@ -121,16 +132,19 @@ final class MainViewController: UIViewController {
             habitTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             habitTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
 
-            mainImage.topAnchor.constraint(equalTo: topImage.bottomAnchor, constant: 40),
+            mainImage.topAnchor.constraint(equalTo: topImage.bottomAnchor, constant: view.frame.height * 0.04319),
             mainImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             mainImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            mainImage.heightAnchor.constraint(equalToConstant: view.frame.height / 3),
+            mainImage.widthAnchor.constraint(equalToConstant: view.frame.height / 3),
 
-            infoHabitLabel.topAnchor.constraint(equalTo: mainImage.bottomAnchor, constant: 16),
+            infoHabitLabel.topAnchor.constraint(equalTo: mainImage.bottomAnchor, constant: view.frame.height * 0.01727),
             infoHabitLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             infoHabitLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
 
-            arrowImage.topAnchor.constraint(equalTo: infoHabitLabel.bottomAnchor, constant: 5),
-            arrowImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -130)
+            arrowImage.topAnchor.constraint(equalTo: infoHabitLabel.bottomAnchor, constant: view.frame.height * 0.00539),
+            arrowImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: view.frame.height * -0.18038),
+            arrowImage.heightAnchor.constraint(equalToConstant: view.frame.height * 0.16198)
         ])
     }
 }

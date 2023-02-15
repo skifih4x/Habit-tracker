@@ -450,15 +450,12 @@ extension AddHabitScreen: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch sections[indexPath.section] {
         case .first(let first):
-            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FirstSectionCell", for: indexPath) as? FirstSectionCell else {
                 return UICollectionViewCell()
             }
             cell.configureCell(image: first[indexPath.item].image)
             return cell
         }
-        
-        
     }
 }
 

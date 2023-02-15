@@ -38,7 +38,7 @@ final class MissedHobitCell: UITableViewCell {
         button.layer.cornerRadius = 4
         button.layer.borderWidth = 1
         button.layer.borderColor = #colorLiteral(red: 0.2927370965, green: 0.4645472765, blue: 0.7684565783, alpha: 1).cgColor
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -40.25, bottom: 0, right: 0)
+//        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -40.25, bottom: 0, right: 0)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
