@@ -205,7 +205,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 import SwiftUI
-struct ListProvider2: PreviewProvider {
+struct ListProvider: PreviewProvider {
     static var previews: some View {
         ContainterView().edgesIgnoringSafeArea(.all)
             .previewDevice("iPhone 12 Pro Max")
@@ -219,13 +219,13 @@ struct ListProvider2: PreviewProvider {
     struct ContainterView: UIViewControllerRepresentable {
         let listVC = MainViewController()
         func makeUIViewController(context:
-                                  UIViewControllerRepresentableContext<ListProvider2.ContainterView>) -> MainViewController {
+                                  UIViewControllerRepresentableContext<ListProvider.ContainterView>) -> MainViewController {
             return listVC
         }
         
         func updateUIViewController(_ uiViewController:
-                                    ListProvider2.ContainterView.UIViewControllerType, context:
-                                    UIViewControllerRepresentableContext<ListProvider2.ContainterView>) {
+                                    ListProvider.ContainterView.UIViewControllerType, context:
+                                    UIViewControllerRepresentableContext<ListProvider.ContainterView>) {
         }
     }
 }
