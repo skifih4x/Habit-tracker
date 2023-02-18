@@ -21,6 +21,7 @@
 		00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD1DD5297ED557006797F5 /* MainViewController.swift */; };
 		00FD1DDB297ED558006797F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FD1DDA297ED558006797F5 /* Assets.xcassets */; };
 		00FD1DDE297ED558006797F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FD1DDC297ED558006797F5 /* LaunchScreen.storyboard */; };
+		3780579B29A001DA00A3CA8A /* TutorialAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780579A29A001DA00A3CA8A /* TutorialAlert.swift */; };
 		37CAB018297F4ACC00A665E5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB017297F4ACC00A665E5 /* Theme.swift */; };
 		37CAB020297F50D600A665E5 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB019297F50D500A665E5 /* Manrope-Regular.ttf */; };
 		37CAB021297F50D600A665E5 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB01A297F50D500A665E5 /* Manrope-Medium.ttf */; };
@@ -50,6 +51,7 @@
 		00FD1DDA297ED558006797F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00FD1DDD297ED558006797F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FD1DDF297ED558006797F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3780579A29A001DA00A3CA8A /* TutorialAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialAlert.swift; sourceTree = "<group>"; };
 		37CAB017297F4ACC00A665E5 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		37CAB019297F50D500A665E5 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
 		37CAB01A297F50D500A665E5 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				00FD1DD5297ED557006797F5 /* MainViewController.swift */,
+				3780579A29A001DA00A3CA8A /* TutorialAlert.swift */,
 				37CAB0392983231000A665E5 /* MockData.swift */,
 				37CAB0302983220700A665E5 /* Cells */,
 				37CAB0282981C7D100A665E5 /* AddHabitScreen.swift */,
@@ -319,6 +322,7 @@
 				37CAB0342983223100A665E5 /* FirstSectionCell.swift in Sources */,
 				0053E8E7297EF2F700353EF1 /* CalendarViewController.swift in Sources */,
 				37CAB03A2983231000A665E5 /* MockData.swift in Sources */,
+				3780579B29A001DA00A3CA8A /* TutorialAlert.swift in Sources */,
 				00FD1DD6297ED557006797F5 /* MainViewController.swift in Sources */,
 				007CCB2E2982B4FF00DBDDF4 /* CellHabit.swift in Sources */,
 				00FD1DD2297ED557006797F5 /* AppDelegate.swift in Sources */,
