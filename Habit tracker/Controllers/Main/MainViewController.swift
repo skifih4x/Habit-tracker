@@ -9,6 +9,29 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    let customAlert = TutorialAlert()
+    
+    
+    private let testButton: UIButton = {
+       let button = UIButton()
+        button.setTitle("TEST ARERT", for: .normal)
+        button.setBackgroundColor(color: .green, forState: .normal)
+        button.addTarget(self, action: #selector(testAlert), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+//    """
+//    Чтобы удалить привычку, свайпните влево
+//    по карточке привычки
+//    """
+    
+    @objc private func testAlert() {
+        customAlert.showAlert(title: "Test title",
+                              message: "Test message",
+                              viewController: self)
+    }
+    
     private lazy var habitLabel: UILabel = {
         let label = UILabel()
         label.text = "Мои привычки"
@@ -113,6 +136,8 @@ final class MainViewController: UIViewController {
         view.addSubview(infoHabitLabel)
         view.addSubview(arrowImage)
         view.addSubview(habitTableView)
+        
+        view.addSubview(testButton) //Delete after test
 
         NSLayoutConstraint.activate([
             habitLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.06263),
@@ -130,7 +155,7 @@ final class MainViewController: UIViewController {
             habitTableView.topAnchor.constraint(equalTo: topImage.bottomAnchor),
             habitTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             habitTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            habitTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            habitTableView.bottomAnchor.constraint(equalTo: testButton.topAnchor, constant: 0), //change back to view.bottomAnchor, constant: 0
 
             mainImage.topAnchor.constraint(equalTo: topImage.bottomAnchor, constant: view.frame.height * 0.04319),
             mainImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
@@ -144,7 +169,14 @@ final class MainViewController: UIViewController {
 
             arrowImage.topAnchor.constraint(equalTo: infoHabitLabel.bottomAnchor, constant: view.frame.height * 0.00539),
             arrowImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: view.frame.height * -0.18038),
-            arrowImage.heightAnchor.constraint(equalToConstant: view.frame.height * 0.16198)
+            arrowImage.heightAnchor.constraint(equalToConstant: view.frame.height * 0.16198),
+            
+            
+            
+            //test code. Delete after test
+            testButton.topAnchor.constraint(equalTo: habitTableView.bottomAnchor, constant: 30),
+            testButton.heightAnchor.constraint(equalToConstant: 50),
+            testButton.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
 }
@@ -174,9 +206,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let verticalPadding: CGFloat = 8
 
         let maskLayer = CALayer()
-        maskLayer.cornerRadius = 10    //if you want round edges
+        maskLayer.cornerRadius = 10
         maskLayer.backgroundColor = UIColor.black.cgColor
-        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding / 2)
         cell.layer.mask = maskLayer
 
         switch indexPath.row {
