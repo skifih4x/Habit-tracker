@@ -9,6 +9,22 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    let customAlert = TutorialAlert()
+    
+    
+
+    
+
+    
+ private func testAlert() {
+        customAlert.showAlert(message:
+    """
+    Чтобы удалить привычку, свайпните влево
+    по карточке привычки
+    """,
+                              viewController: self)
+    }
+    
     private lazy var habitLabel: UILabel = {
         let label = UILabel()
         label.text = "Мои привычки"
@@ -144,7 +160,7 @@ final class MainViewController: UIViewController {
 
             arrowImage.topAnchor.constraint(equalTo: infoHabitLabel.bottomAnchor, constant: view.frame.height * 0.00539),
             arrowImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: view.frame.height * -0.18038),
-            arrowImage.heightAnchor.constraint(equalToConstant: view.frame.height * 0.16198)
+            arrowImage.heightAnchor.constraint(equalToConstant: view.frame.height * 0.16198),
         ])
     }
 }
@@ -174,9 +190,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let verticalPadding: CGFloat = 8
 
         let maskLayer = CALayer()
-        maskLayer.cornerRadius = 10    //if you want round edges
+        maskLayer.cornerRadius = 10
         maskLayer.backgroundColor = UIColor.black.cgColor
-        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding / 2)
         cell.layer.mask = maskLayer
 
         switch indexPath.row {
@@ -200,6 +216,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        testAlert()
     }
 
 }
