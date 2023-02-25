@@ -63,6 +63,7 @@ class TutorialAlert {
         
         let alertButton = UIButton(frame: CGRect(x: 15, y: alertView.frame.height - 55, width: alertView.frame.width - 30, height: 40))
         alertButton.setTitle("Понятно", for: .normal)
+        alertButton.titleLabel?.font = UIFont(name: Theme.fontName, size: 12)
         alertButton.layer.cornerRadius = 8
         alertButton.setBackgroundColor(color: Theme.buttonAccentDark, forState: .normal)
         alertButton.addTarget(self, action: #selector(dismissAlert), for: .touchUpInside)
