@@ -11,7 +11,7 @@ class TutorialAlert {
     
     
     struct Constants {
-        static let backgroundAlpha: CGFloat = 0.8
+        static let backgroundAlpha: CGFloat = 0.5
     }
     
     // Затемняющийся background
@@ -40,7 +40,7 @@ class TutorialAlert {
     private var dismissTargetView: UIView?
     
     //Метод, для использования на любом ViewController'е
-    func showAlert(title: String, message: String, viewController: UIViewController) {
+    func showAlert(message: String, viewController: UIViewController) {
         guard let targetView = viewController.view else { return }
         
         dismissTargetView = targetView
@@ -51,26 +51,20 @@ class TutorialAlert {
         alertView.frame = CGRect(x: 40, y: -216, width: targetView.frame.width - 80, height: 216)
         targetView.addSubview(alertView)
         
-        alertImage.frame = CGRect(x: 112, y: 40, width: targetView.frame.width / 2, height: targetView.frame.height * 0.17)
+        alertImage.frame = CGRect(x: alertView.frame.width / 3, y: 40, width: 111, height: 36)
         alertView.addSubview(alertImage)
         
-        let titleLabel = UILabel(frame: CGRect(x: 200, y: 0, width: alertView.frame.width, height: 80))
-        titleLabel.text = title
-        titleLabel.font = .systemFont(ofSize: 14)
-        titleLabel.textColor = Theme.textDark
-        titleLabel.textAlignment = .center
-//        titleLabel.numberOfLines = 0
-        alertView.addSubview(titleLabel)
-        
-        let messageLabel = UILabel(frame: CGRect(x: 70, y: 80, width: alertView.frame.width - 140, height: 180)) // ширина вычитаем ось Х * 2 для центровки
+        let messageLabel = UILabel(frame: CGRect(x: 10, y: 100, width: alertView.frame.width - 20, height: 45)) // ширина вычитаем ось Х * 2 для центровки
         messageLabel.text = message
+        messageLabel.font = UIFont(name: Theme.fontName, size: 14)
         messageLabel.textAlignment = .center
         messageLabel.numberOfLines = 0
         alertView.addSubview(messageLabel)
         
-        let alertButton = UIButton(frame: CGRect(x: 140, y: alertView.frame.height - 90, width: alertView.frame.width - 280, height: 40))
-        alertButton.setTitle("TestMessage", for: .normal)
-        alertButton.setBackgroundColor(color: .blue, forState: .normal)
+        let alertButton = UIButton(frame: CGRect(x: 15, y: alertView.frame.height - 55, width: alertView.frame.width - 30, height: 40))
+        alertButton.setTitle("Понятно", for: .normal)
+        alertButton.layer.cornerRadius = 8
+        alertButton.setBackgroundColor(color: Theme.buttonAccentDark, forState: .normal)
         alertButton.addTarget(self, action: #selector(dismissAlert), for: .touchUpInside)
         alertView.addSubview(alertButton)
         
